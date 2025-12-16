@@ -399,13 +399,9 @@ address {
   }
 }
 
-.row.g-4 {
-  gap: var(--space-lg);
-}
+.row
 
-.row.g-5 {
-  gap: var(--space-2xl);
-}
+.row
 
 .row.align-items-center {
   align-items: center;
@@ -2164,5 +2160,37 @@ textarea.form-control {
   .c-hero__actions .c-button,
   .l-cta__actions .c-button {
     width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .g-4 {
+    gap: var(--space-lg);
+  }
+
+  .g-5 {
+    gap: var(--space-2xl);
+  }
+}
+
+/* AUTO-INJECTED: bg-dark child text fix */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* AUTO-INJECTED: g-4 layout fix */
+.g-4 > * {
+  width: 100%;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }

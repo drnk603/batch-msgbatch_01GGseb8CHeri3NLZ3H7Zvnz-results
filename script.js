@@ -330,10 +330,10 @@
         if (entry.isIntersecting) {
           var element = entry.target;
           var text = element.textContent.trim();
-          var match = text.match(/[d,.]+/);
+          var match = text.match(/[\d,.]+/);
           if (match) {
             var endValue = parseFloat(match[0].replace(/,/g, ''));
-            var suffix = text.replace(/[d,.]+/, '').trim();
+            var suffix = text.replace(/[\d,.]+/, '').trim();
             element.dataset.suffix = suffix;
             element.textContent = '0' + suffix;
             animateValue(element, 0, endValue, 2000);
@@ -355,9 +355,9 @@
     var forms = document.querySelectorAll('form.c-form');
 
     var patterns = {
-      name: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
-      email: /^[^s@]+@[^s@]+.[^s@]+$/,
-      phone: /^[+-ds()]{10,20}$/,
+      name: /^[a-zA-ZÀ-ÿ\s-']{2,50}$/,
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      phone: /^[+\-\d\s()]{10,20}$/,
       message: /^.{10,}$/
     };
 
